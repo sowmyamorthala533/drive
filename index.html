@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Advances javascript quiz</h1>
+    <input id="input" placeholder="enter ur name">
+    <button id="button">Random name</button>
+    <button id="button1">Start quiz</button>
+    <button id="button2">View High Scores</button>
+<script>
+    const but=document.getElementById("button")
+    const arr=["alice","bob","jenny","lopher","vennila","john","jack"]
+    function name(){
+        const random=Math.floor(Math.random()*arr.length)
+        return arr[random]
+    }
+    but.addEventListener("click",()=>{
+        const names=name()
+        const inp=document.getElementById("input")
+        inp.value=names
+    })
+    const btn2=document.getElementById("button2")
+    btn2.addEventListener("click",()=>{
+       location.href="./next.html"
+    })
+</script>
+</body>
+</html>
